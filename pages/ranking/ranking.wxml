@@ -7,7 +7,7 @@
   <view class="list_bg" style='background: rgba(0, 0, 0, 0.65);'>
     <view class="list_top_ranking" >
 
-      <view class="{{ rankingType == 3?'categoryItem':'categoryItemHide'}}">
+      <view class="{{ rankingType == 3?'categoryItemHide':'categoryItemHide'}}">
         <view class="choose_category">选择科目</view>
         <view class="selectItem" bindtap="onClickSelectCategory">
           <view class="categoryRanking">{{categoryTitle}}</view>

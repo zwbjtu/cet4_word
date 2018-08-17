@@ -10,11 +10,11 @@ var isGoShipping = false;
 
 Page({
   data: {
-    motto: 'MKWZ',
+    motto: 'CET4WORD',
     userInfo: {},
     userInfo1: {
 avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avatar_default.jpg",
-      nickName:"MKING"
+      nickName:"NONAME"
     },
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -173,7 +173,7 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
   },
   onClickSelf:function(){
     wx.navigateTo({
-      url: '../select/select' + '?frompageid=1&lockLevel=' + (5) + '&maxLevel=' + 5
+      url: '../challenge/challenge?id=31&frompageid=1',
     })
   },
   onClickFriend: function () {
@@ -186,9 +186,9 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
     if(isGoShipping) {
       this.showNotOK();
     } else {
-        wx.navigateTo({
-          url: '../select/select?frompageid=2',
-       })
+      wx.navigateTo({
+        url: '../invitation/invitation?id=31&frompageid=2',
+      })
     }
    
   },
@@ -200,41 +200,15 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
   onClickRanking: function () {
     wx.navigateTo({
       url: '../ranking/ranking'
-    })
+    }) 
   },
 
   onClickStudy:function() {
     wx.navigateTo({
-      url: '../select/select?frompageid=4',
+      url: '../study/study?id=31&frompageid=4',
     })
   },
-/*
-  onShareAppMessage: function (ops) {
-    if (ops.from == 'button') {
-      return {
-        title: '[有人@我]免费全面的考题等你挑战',
-        imageUrl:'https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home_rank.png',
-        path: 'pages/home/home',
-        success: function (res) {
-          console.log("转发成功:" + JSON.stringify(res));
-        },
-        fail: function (res) {
-          console.log("转发失败:" + JSON.stringify(res));
-        }
-      }
-    } else {
-      return {
-        title: '[有人@我]免费全面的考题等你挑战',
-        path: 'pages/home/home',
-        success: function (res) {
-          console.log("转发成功:" + JSON.stringify(res));
-        },
-        fail: function (res) {
-          console.log("转发失败:" + JSON.stringify(res));
-        }
-      }
-    }
-  },*/
+
   getUserInfoFun: function (e) {
     var S = this;
     console.log("home page onClick id:" + e.target.id);
@@ -244,7 +218,7 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
           console.log("home page get userInfo:" + res)
           app.setUserInfo(res);
           S.setData({
-            userInfo: res.userInfo,
+            userInfo: res.userInfo,   
             hasUserInfo: true
           })
           S.onClickButton(e.target.id);
@@ -295,7 +269,7 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
 
   showToast:function(str){
     wx.showToast({
-      title: str,
+      title: str, 
       icon: 'none',
     })
   },
@@ -303,7 +277,7 @@ avatarUrl:"https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/home/avat
   onShareAppMessage: function (res) {
     let that = this
     return {
-      title: '[有人@我]免费全面的考题等你挑战',
+      title: '[有人@我]来试试好玩的单词学习工具吧！',
       imageUrl: 'https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/share/share_invite_logo.png',
       path: 'pages/home/home',
       success: function (res) {

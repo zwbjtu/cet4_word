@@ -34,8 +34,21 @@ page {
   justify-content: space-between;
   align-items: center;
   margin-top: 30rpx;
+  padding-left: 20rpx;
   background-size: 100% 100%;
+   /* border: 1rpx solid #000; */
   background-repeat: no-repeat;
+}
+
+.topbannerhide {
+  display: none;
+}
+
+.topbanner_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 36rpx;
 }
 
 .question_type {
@@ -53,12 +66,6 @@ page {
   background-size: 100% 100%;
 }
 
-.topbanner_right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 30rpx;
-}
 
 .question_list_image {
   width: 32rpx;
@@ -198,7 +205,7 @@ page {
 
 
 .failed {
-  top: 20%;
+  top: 15%;
   left: 0;  
   width: 100%;
   height: 100%;
@@ -286,7 +293,7 @@ page {
 .answerIndex {
   color: #fff;
   display: flex;
-  align-self: center;
+  align-self:center;
   width: 54rpx;
   height: 54rpx;
   min-width: 54rpx;
@@ -474,12 +481,13 @@ page {
 
 .context {
   color: #fff;
-  margin-left: 0rpx;
+  margin-left: 16rpx;
   margin-right: 10rpx;
-  margin-top: 10rpx;
-  margin-bottom: 30rpx;
+  align-items:baseline;
   word-break: break-all;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  /* border: 1rpx solid #000; */
 }
 
 .type2image {

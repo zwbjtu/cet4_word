@@ -82,7 +82,7 @@ page {
 }
 
 .score1 {
-  display: flex;
+  display: none;
   margin-left: 5%;
   margin-right: 5%;
   height: 10vh;
@@ -109,7 +109,7 @@ page {
   margin-right: 5%;
   border-top-left-radius: 50rpx;
   border-top-right-radius: 50rpx;
-  height: 90vh;
+  height: 100vh;
 }
 
 .group1 {
@@ -460,7 +460,7 @@ color: #fdaf01;
 }
 
 .scrollview_layout_category {
-  height: 64vh;
+  height: 80vh;
 }
 
 .scrollview_layout_world {
@@ -471,6 +471,8 @@ color: #fdaf01;
   display: flex;
   align-items: center;
   width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   color: rgba(246, 249, 252, 0.5);
   font-size: 0.8rem;
 }

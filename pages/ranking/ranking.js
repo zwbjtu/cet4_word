@@ -7,7 +7,7 @@ var tmpFCPKSubLevels = [];
 
 Page({
   data: {
-    motto: 'MKWZ',
+    motto: 'CET4WORD',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -21,12 +21,12 @@ Page({
     windowW:0,
     windowH:0,
     challenge:-1,
-    rankingType:1,
+    rankingType:3,
     datalist:[],
     crownlist:[],
     idxbgcolorlist:[],
     page_index:0,
-    categoryID:0,
+    categoryID:31,
     myCategoryRanking:0,
     myGlobalRanking:0,
     showCategoryList:false,
@@ -155,17 +155,33 @@ Page({
     });
     this.initData();
     this.setData({
-      rankingType: 2,
+      rankingType: 3,
+      categoryID: 31,
       //datalist: this.data.friendlist,
       myGlobalRanking: app.globalData.userRanking,
       //categoryList: app.globalData.commonList,
     });
     
-    this.getWorldRankingList(0);
+    // this.getWorldRankingList(0);
+    this.getCategoryRankingList(0, this.data.categoryID);
   },
 
   initData:function(){
-    this.loadFavoriteCategory();
+    // this.loadFavoriteCategory();
+    this.data.crownlist = new Array();
+    this.data.crownlist[0] = "/images/ic_rank_1.png";
+    this.data.crownlist[1] = "/images/ic_rank_2.png";
+    this.data.crownlist[2] = "/images/ic_rank_3.png";
+
+    this.data.idxbgcolorlist = new Array();
+    this.data.idxbgcolorlist[0] = "#FDAF01";
+    this.data.idxbgcolorlist[1] = "#DD4E43";
+    this.data.idxbgcolorlist[2] = "#00A2FF";
+
+    this.setData({
+      crownlist: this.data.crownlist,
+      idxbgcolorlist: this.data.idxbgcolorlist,
+    });
   },
 
   loadFavoriteCategory: function () {
@@ -297,7 +313,7 @@ Page({
     });
   },
   onClickWorldRanking: function () {
-    if (this.data.rankingType == 2) {
+    if (this.data.rankingType == 2) {//世界排名
       return;
     }
     this.setData({
@@ -307,7 +323,7 @@ Page({
     this.getWorldRankingList(0);
   },
   onClickCategoryRanking: function () {
-    if (this.data.rankingType == 3){
+    if (this.data.rankingType == 3){//科目排名
       return ;
     }
     this.setData({
@@ -350,7 +366,6 @@ Page({
   onScrolltoupper: function (e) {
     console.log(e);
   },
-
   onClickSelectCategory:function(e){
     if(this.data.categoryList.length == 0) {
       return;

@@ -3,16 +3,16 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://uwfsgfrn.qcloud.la';
-//var host = 'https://280142242.mokao100.cn';
+//var host = 'https://uwfsgfrn.qcloud.la';
+var host = 'https://280142242.mokao100.cn';
 //debug openid https://280142242.mokao100.cn/weapp/get_scoreinfo?openId=oybxV46KRzhumeVBDWczTLP3wtcA
 
 var config = { 
-
+  
     // 下面的地址配合云端 Demo 工作
     service: {
         host,
-        appid: 'wx26595d4a74659688',
+        appid: 'wx3b47f29abd507064',
         // 登录地址，用于建立会话
         loginUrl: `${host}/weapp/login`,
 

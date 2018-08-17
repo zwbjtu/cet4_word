@@ -664,7 +664,7 @@ Page({
     var that = this;
     if (ops.from == 'button') {
       return {
-        title: '[有人@我]免费全面的考题等你挑战',
+        title: '[有人@我]来试试好玩的单词学习工具吧',
         path: 'pages/home/home',
         imageUrl: 'https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/share/share_invite_logo.png',
         success: function (res) {
@@ -676,7 +676,7 @@ Page({
       }
     } else {
       return {
-        title: '[有人@我]免费全面的考题等你挑战',
+        title: '[有人@我]来试试好玩的单词学习工具吧',
         path: 'pages/home/home',
         imageUrl: 'https://lg-6enwjric-1256925828.cos.ap-shanghai.myqcloud.com/share/share_invite_logo.png',
         success: function (res) {
@@ -710,57 +710,6 @@ Page({
     this.data.pendEvent = false;
     this.loadNext(200);
   },
-
-  /*
-
-var touchDot = 0;//触摸时的原点
-var time = 0;// 时间记录，用于滑动时且时间小于1s则执行左右滑动
-var interval = "";// 记录/清理时间记录
-
-  */
-
-  // 触摸开始事件  
-  // touchStart: function (e) {
-  //   console.log("touchStart----:");
-  //   touchDown = e.touches[0].pageX; // 获取触摸时的原点  
-  //   touchUp = 0;
-  //   time = 0;
-  //   // 使用js计时器记录时间    
-  //   intervalId = setInterval(function () {
-  //     time++;
-  //     console.log("set interval time :" + time);
-  //   }, 100);
-  // },
-  // // 触摸移动事件  
-  // touchMove: function (e) {
-  //   touchUp = e.touches[0].pageX;
-  // }, 
-  // // 触摸结束事件      
-  // touchEnd: function (e) {
-  //   console.log("touchEnd----" );
-    
-  //   if(touchUp == 0) {
-  //     clearInterval(intervalId); // 清除setInterval  
-  //     time = 0;
-  //     return;
-  //   }
-
-  //   var touchDelta = touchDown - touchUp;
-  //   console.log("touchDown:" + touchDown + " touchUp:" + touchUp + " time:" + time + " touchDelta:" + touchDelta);
-
-  //   if (touchUp - touchDown > 20 && touchUp - touchDown <= 250 && time < 5) {
-  //     console.log('向右滑动');
-  //     this.loadNext(10);
-  //   } else if (touchDown - touchUp > 20 && touchDown - touchUp <= 250 && time < 5) {
-  //     console.log('向左滑动');
-  //     this.loadPrev(10);
-  //   } else {
-  //     console.log('ignore slide');
-  //   }
-
-  //   clearInterval(intervalId); // 清除setInterval  
-  //   time = 0;
-  // },  
 
   onShow: function() {
     console.log('study ------------->  onShow')
