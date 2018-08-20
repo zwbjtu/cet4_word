@@ -433,7 +433,7 @@ page {
   margin-right: 10rpx;
   margin-bottom: 30rpx;
   word-break: break-all;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .type2image {
@@ -832,7 +832,7 @@ button::after {
 .subject_index_left {
   color: #fff;
   font-size: 1.5rem;
-  margin-left: 20rpx;
+  margin-left: 0rpx;
 }
 
 .subject_index {
